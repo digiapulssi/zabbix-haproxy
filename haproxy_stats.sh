@@ -14,9 +14,17 @@ else
   fi
 fi
 
-pxname="$1"
-svname="$2"
-stat="$3"
+if [ "${1,,}" == "info" ] && [ "$#" == "2" ]; then
+  # Two arguments: INFO variable
+  stat="$2"
+  INFO_MODE=1
+
+else
+  pxname="$1"
+  svname="$2"
+  stat="$3"
+  STATS_MODE=1
+fi
 
 DEBUG=${DEBUG:-0}
 HAPROXY_SOCKET="${HAPROXY_SOCKET:-/var/run/haproxy/info.sock}"
@@ -33,6 +41,15 @@ FLOCK_WAIT=15 # maximum number of seconds that "flock" waits for acquiring a loc
 FLOCK_SUFFIX='.lock'
 CUR_TIMESTAMP="$(date '+%s')"
 
+# Select cache path
+if [ -n "$STATS_MODE" ]; then
+  CACHE_FILEPATH="$CACHE_STATS_FILEPATH"
+  CACHE_EXPIRATION="$CACHE_STATS_EXPIRATION"
+else
+  CACHE_FILEPATH="$CACHE_INFO_FILEPATH"
+  CACHE_EXPIRATION="$CACHE_INFO_EXPIRATION"
+fi
+
 debug() {
   [ "${DEBUG}" -eq 1 ] && echo "DEBUG: $@" >&2 || true
 }
@@ -44,8 +61,10 @@ debug "FLOCK_WAIT       => $FLOCK_WAIT seconds"
 debug "CACHE_FILEPATH   => $CACHE_FILEPATH"
 debug "CACHE_EXPIRATION => $CACHE_EXPIRATION minutes"
 debug "HAPROXY_SOCKET   => $HAPROXY_SOCKET"
-debug "pxname   => $pxname"
-debug "svname   => $svname"
+if [ -n "$STATS_MODE" ]; then
+  debug "pxname   => $pxname"
+  debug "svname   => $svname"
+fi
 debug "stat     => $stat"
 
 # check if socat is available in path
@@ -149,19 +168,21 @@ MAP="
 62:ttime:0
 "
 
-_STAT=$(echo -e "$MAP" | grep :${stat}:)
-_INDEX=${_STAT%%:*}
-_DEFAULT=${_STAT##*:}
+if [ -n "$STATS_MODE" ]; then
+  _STAT=$(echo -e "$MAP" | grep :${stat}:)
+  _INDEX=${_STAT%%:*}
+  _DEFAULT=${_STAT##*:}
 
-debug "_STAT    => $_STAT"
-debug "_INDEX   => $_INDEX"
-debug "_DEFAULT => $_DEFAULT"
+  debug "_STAT    => $_STAT"
+  debug "_INDEX   => $_INDEX"
+  debug "_DEFAULT => $_DEFAULT"
 
-# check if requested stat is supported
-if [ -z "${_STAT}" ]
-then
-  echo "ERROR: $stat is unsupported"
-  exit 127
+  # check if requested stat is supported
+  if [ -z "${_STAT}" ]
+  then
+    echo "ERROR: $stat is unsupported"
+    exit 127
+  fi
 fi
 
 # method to retrieve data from haproxy stats
@@ -179,7 +200,7 @@ query_stats() {
 check_cache() {
   local cache_type="${1}"
   local cache_filepath="${2}"
-  local cache_expiration="${3}"  
+  local cache_expiration="${3}"
   local cache_filemtime
   cache_filemtime=$(stat -c '%Y' "${cache_filepath}" 2> /dev/null)
   if [ $((cache_filemtime+60*cache_expiration)) -ge ${CUR_TIMESTAMP} ]
@@ -199,21 +220,20 @@ check_cache() {
 }
 
 # generate stats cache file if needed
-get_stats() {
-  check_cache 'stat' "${CACHE_STATS_FILEPATH}" ${CACHE_STATS_EXPIRATION}
+refresh_stats() {
+  check_cache 'stat' "${CACHE_FILEPATH}" ${CACHE_EXPIRATION}
 }
 
-# generate info cache file
-## unused at the moment
-get_info() {
-  check_cache 'info' "${CACHE_INFO_FILEPATH}" ${CACHE_INFO_EXPIRATION}
+# generate info cache file if needed
+refresh_info() {
+  check_cache 'info' "${CACHE_FILEPATH}" ${CACHE_EXPIRATION}
 }
 
 # get requested stat from cache file using INDEX offset defined in MAP
 # return default value if stat is ""
-get() {
+get_stats() {
   # $1: pxname/svname
-  local _res="$("${FLOCK_BIN}" --shared --wait "${FLOCK_WAIT}" "${CACHE_STATS_FILEPATH}${FLOCK_SUFFIX}" grep $1 "${CACHE_STATS_FILEPATH}")"
+  local _res="$("${FLOCK_BIN}" --shared --wait "${FLOCK_WAIT}" "${CACHE_FILEPATH}${FLOCK_SUFFIX}" grep $1 "${CACHE_FILEPATH}")"
   if [ -z "${_res}" ]
   then
     echo "ERROR: bad $pxname/$svname"
@@ -228,19 +248,34 @@ get() {
   fi
 }
 
+# get requested info from cache file
+get_info() {
+  # $1: info variable to get (eg. 'Maxsock: ')
+  local _res="$("${FLOCK_BIN}" --shared --wait "${FLOCK_WAIT}" "${CACHE_FILEPATH}${FLOCK_SUFFIX}" grep "$1" "${CACHE_FILEPATH}")"
+  if [ -z "${_res}" ]
+  then
+    echo "ERROR: bad $1"
+    exit 127
+  fi
+  echo "${_res##*: }"
+}
+
 # not sure why we'd need to split on backslash
 # left commented out as an example to override default get() method
 # status() {
 #   get "^${pxname},${svnamem}," $stat | cut -d\  -f1
 # }
 
+if [ -n "$INFO_MODE" ]; then
+  # info query
+  refresh_info && get_info "^${stat}: "
+
 # this allows for overriding default method of getting stats
 # name a function by stat name for additional processing, custom returns, etc.
-if type get_${stat} >/dev/null 2>&1
-then
+elif type get_${stat} >/dev/null 2>&1; then
   debug "found custom query function"
-  get_stats && get_${stat}
+  refresh_stats && get_${stat}
 else
   debug "using default get() method"
-  get_stats && get "^${pxname},${svname}," ${stat}
+  refresh_stats && get_stats "^${pxname},${svname}," ${stat}
 fi
