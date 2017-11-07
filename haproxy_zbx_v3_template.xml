@@ -853,7 +853,7 @@
             <discovery_rules>
                 <discovery_rule>
                     <name>HAProxy backend discovery</name>
-                    <type>0</type>
+                    <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
                     <key>haproxy.list.discovery[{$HAPROXY_SOCK},BACK]</key>
@@ -886,14 +886,14 @@
                     <item_prototypes>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] active</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,act]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -933,14 +933,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] backup</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,bck]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -980,14 +980,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] bytes in</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,bin]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -1027,14 +1027,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] bytes out</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,bout]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -1074,14 +1074,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] up-down transitions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,chkdown]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1121,14 +1121,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] client aborts</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,cli_abrt]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1168,14 +1168,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] compressor bypass</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,comp_byp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -1215,14 +1215,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] compressor in</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,comp_in]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -1262,14 +1262,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] compressor out</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,comp_out]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -1309,14 +1309,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] compressed responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,comp_rsp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -1356,14 +1356,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] avg connect time</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,ctime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1403,14 +1403,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] downtime</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,downtime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1450,14 +1450,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] denied requests</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,dreq]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1499,14 +1499,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] denied responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,dresp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1547,14 +1547,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] connection errors</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,econ]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1594,14 +1594,14 @@
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] response errors</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,eresp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -1644,13 +1644,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] 1xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,hrsp_1xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1691,13 +1691,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] 2xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,hrsp_2xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1738,13 +1738,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] 3xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,hrsp_3xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1785,13 +1785,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] 4xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,hrsp_4xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1832,13 +1832,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] 5xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,hrsp_5xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1879,13 +1879,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] other responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,hrsp_other]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1926,13 +1926,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] proxy id</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,iid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -1973,14 +1973,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] last change</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,lastchg]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2020,14 +2020,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] last session</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,lastsess]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2067,14 +2067,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] selection count</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,lbtot]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2114,13 +2114,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] pid</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,pid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -2161,14 +2161,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] current queued requests</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,qcur]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2208,14 +2208,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] max queued requests</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,qmax]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2255,14 +2255,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] avg queue time</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,qtime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2302,14 +2302,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] session rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,rate]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2349,14 +2349,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] max session rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,rate_max]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2396,14 +2396,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] avg response time</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,rtime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2443,14 +2443,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] current sessions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,scur]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2490,14 +2490,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] session limit</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,slim]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2537,14 +2537,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] max sessions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,smax]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2584,14 +2584,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] server aborts</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,srv_abrt]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2631,13 +2631,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] status</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,status]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
@@ -2678,14 +2678,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] type</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,type]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2725,14 +2725,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] weight</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,weight]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2772,14 +2772,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] conn redispatches</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,wredis]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -2819,14 +2819,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}] conn retries</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},BACKEND,wretr]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -3972,7 +3972,7 @@ Some other errors are:
                 </discovery_rule>
                 <discovery_rule>
                     <name>HAProxy frontend discovery</name>
-                    <type>0</type>
+                    <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
                     <key>haproxy.list.discovery[{$HAPROXY_SOCK},FRONT]</key>
@@ -4005,14 +4005,14 @@ Some other errors are:
                     <item_prototypes>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] bytes in</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,bin]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -4052,14 +4052,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] bytes out</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,bout]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -4099,14 +4099,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] compressor bypass</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,comp_byp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -4146,14 +4146,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] compressor in</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,comp_in]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -4193,14 +4193,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] compressor out</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,comp_out]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -4240,14 +4240,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] compressed responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,comp_rsp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -4287,14 +4287,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] denied requests</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,dreq]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -4336,14 +4336,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] denied responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,dresp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -4384,14 +4384,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] request errors</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,ereq]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -4437,13 +4437,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] 1xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,hrsp_1xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4484,13 +4484,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] 2xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,hrsp_2xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4531,13 +4531,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] 3xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,hrsp_3xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4578,13 +4578,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] 4xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,hrsp_4xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4625,13 +4625,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] 5xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,hrsp_5xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4672,13 +4672,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] other responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,hrsp_other]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4719,13 +4719,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] proxy id</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,iid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4766,13 +4766,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] pid</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,pid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -4813,14 +4813,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] session rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,rate]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -4860,14 +4860,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] session rate limit</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,rate_lim]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -4907,14 +4907,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] max session rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,rate_max]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -4954,14 +4954,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] request rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,req_rate]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5001,14 +5001,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] max request rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,req_rate_max]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5048,14 +5048,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] requests total</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,req_tot]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5095,14 +5095,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] current sessions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,scur]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5142,14 +5142,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] session limit</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,slim]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5189,14 +5189,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] max sessions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,smax]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5236,13 +5236,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] status</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,status]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
@@ -5283,14 +5283,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#FRONTEND_NAME}] type</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#FRONTEND_NAME},FRONTEND,type]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -5988,7 +5988,7 @@ Some other errors are:
                 </discovery_rule>
                 <discovery_rule>
                     <name>HAProxy server discovery</name>
-                    <type>0</type>
+                    <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
                     <key>haproxy.list.discovery[{$HAPROXY_SOCK},SERVER]</key>
@@ -6021,14 +6021,14 @@ Some other errors are:
                     <item_prototypes>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server active</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},act]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6068,14 +6068,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server backup</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},bck]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6115,14 +6115,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server bytes in</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},bin]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6162,14 +6162,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server bytes out</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},bout]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
@@ -6209,13 +6209,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server check code</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},check_code]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6256,14 +6256,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server check duration</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},check_duration]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6303,13 +6303,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server health status</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},check_status]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6364,14 +6364,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server up-down transitions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},chkdown]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6411,14 +6411,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server failed checks</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},chkfail]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6458,14 +6458,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server client aborts</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},cli_abrt]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6505,14 +6505,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server avg connect time</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},ctime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6552,14 +6552,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server downtime</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},downtime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6599,14 +6599,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server denied responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},dresp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6647,14 +6647,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server connection errors</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},econ]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6694,14 +6694,14 @@ L7STS   -&gt; layer 7 response error, for example HTTP 5xx</description>
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server response errors</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},eresp]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -6744,13 +6744,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server health check details</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hanafail]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6791,13 +6791,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server 1xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hrsp_1xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6838,13 +6838,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server 2xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hrsp_2xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6885,13 +6885,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server 3xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hrsp_3xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6932,13 +6932,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server 4xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hrsp_4xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -6979,13 +6979,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server 5xx responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hrsp_5xx]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7026,13 +7026,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server other responses</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},hrsp_other]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7073,13 +7073,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server proxy id</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},iid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7120,14 +7120,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server last change</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},lastchg]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7167,14 +7167,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server last session</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},lastsess]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7214,13 +7214,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server last agent check</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},last_agt]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7261,13 +7261,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server last health check</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},last_chk]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7308,14 +7308,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server selection count</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},lbtot]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7355,13 +7355,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server pid</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},pid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7402,14 +7402,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server current queued requests</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},qcur]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7449,14 +7449,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server queue limit</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},qlimit]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7496,14 +7496,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server max queued requests</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},qmax]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7543,14 +7543,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server avg queue time</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},qtime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7590,14 +7590,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server session rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},rate]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7637,14 +7637,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server max session rate</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},rate_max]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7684,14 +7684,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server avg response time</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},rtime]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7731,14 +7731,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server current sessions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},scur]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7778,13 +7778,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server server id</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},sid]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>1</status>
                             <value_type>1</value_type>
@@ -7825,14 +7825,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server session limit</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},slim]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7872,14 +7872,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server max sessions</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},smax]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7919,14 +7919,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server server aborts</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},srv_abrt]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -7966,13 +7966,13 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server status</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},status]</key>
                             <delay>60</delay>
-                            <history>90</history>
+                            <history>30</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
@@ -8013,14 +8013,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server throttle</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},throttle]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -8060,14 +8060,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server server id</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},tracked]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -8107,14 +8107,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server type</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},type]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -8154,14 +8154,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server weight</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},weight]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -8201,14 +8201,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server conn redispatches</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},wredis]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -8248,14 +8248,14 @@ Some other errors are:
                         </item_prototype>
                         <item_prototype>
                             <name>[{#BACKEND_NAME}/{#SERVER_NAME}] backend server conn retries</name>
-                            <type>0</type>
+                            <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>haproxy.stats[{$HAPROXY_SOCK},{#BACKEND_NAME},{#SERVER_NAME},wretr]</key>
                             <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30</history>
+                            <trends>90</trends>
                             <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>

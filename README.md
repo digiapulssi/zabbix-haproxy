@@ -34,7 +34,7 @@ This repo contains everything you need to discover and monitor HAProxy frontends
 # Default:
 Include=/etc/zabbix/zabbix_agentd.d/
 ```
-* Place `haproxy_discovery.sh` into `/usr/local/bin/` directory and make sure it's executable (`sudo chmod +x /usr/local/bin/haproxy_discovery.sh`)
+* Place `haproxy_discovery.sh` into `/etc/zabbix/scripts/` directory and make sure it's executable (`sudo chmod +x /etc/zabbix/scripts/haproxy_discovery.sh`)
 * Import appropriate `haproxy_zbx_v2_template.xml` or `haproxy_zbx_v3_template.xml` template via Zabbix Web UI interface (provided by `zabbix-frontend-php` package)
 * Configure HAProxy control socket
   - [Configure HAProxy](http://cbonte.github.io/haproxy-dconv/configuration-1.5.html#9.2) to listen on `/var/run/haproxy/info.sock`
@@ -82,13 +82,13 @@ anapsix@lb1:~$ sudo zabbix_agentd -t haproxy.list.discovery[SERVERS]
 
 #### Discover
 ```
-/usr/local/bin/haproxy_discovery.sh $1 $2
+/etc/zabbix/scripts/haproxy_discovery.sh $1 $2
 $1 is a path to haproxy socket
 $2 is FRONTEND or BACKEND or SERVERS
 
-# /usr/local/bin/haproxy_discovery.sh /var/run/haproxy/info.sock FRONTEND    # second argument is optional
-# /usr/local/bin/haproxy_discovery.sh /var/run/haproxy/info.sock BACKEND     # second argument is optional
-# /usr/local/bin/haproxy_discovery.sh /var/run/haproxy/info.sock SERVERS     # second argument is optional
+# /etc/zabbix/scripts/haproxy_discovery.sh /var/run/haproxy/info.sock FRONTEND    # second argument is optional
+# /etc/zabbix/scripts/haproxy_discovery.sh /var/run/haproxy/info.sock BACKEND     # second argument is optional
+# /etc/zabbix/scripts/haproxy_discovery.sh /var/run/haproxy/info.sock SERVERS     # second argument is optional
 ```
 
 #### haproxy_stats.sh script
