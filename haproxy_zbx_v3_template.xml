@@ -9433,12 +9433,12 @@ Some other errors are:
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Check connection to HAProxy port {#PORT}</name>
+                            <name>Check connection to HAProxy port {#IP}:{#PORT}</name>
                             <type>7</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>net.tcp.port[,{#PORT}]</key>
+                            <key>net.tcp.port[{#IP},{#PORT}]</key>
                             <delay>300</delay>
                             <history>90</history>
                             <trends>365</trends>

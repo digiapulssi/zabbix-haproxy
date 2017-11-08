@@ -11,7 +11,21 @@ minport="${1:-0}"
 maxport="${2:-65535}"
 configfile="${3:-/etc/haproxy/haproxy.cfg}"
 
+# Bind syntax may be like
+# bind :80
+# bind 10.0.0.1:10080
+# bind ipv6@:80
+# bind *:80
+# bind :80,:443 (multiple ports, not supported by this script so far)
+
 echo -n '{"data":['
-sed -n -e "s/^\s\+bind .*:\([0-9]\+\).*/\1/p" "$configfile" | awk '$1>='"$minport" | awk '$1<='"$maxport" | sed 's/\(.*\)/{"{#PORT}":"\1"}/g' | sed '$!s/$/,/' | tr '\n' ' '
+sed -n -e "s/^\s\+bind \(.*@\)\{0,1\}\(.*\):\([0-9]\+\).*/\2:\3/p" "$configfile" \
+  | awk -F ':' '$2>='"$minport" \
+  | awk -F ':' '$2<='"$maxport" \
+  | sed 's/^\*:/0.0.0.0:/' \
+  | sed 's/^:/0.0.0.0:/' \
+  | sed 's/\(.*\):\(.*\)/{"{#IP}":"\1","{#PORT}":"\2"}/g' \
+  | sed '$!s/$/,/' \
+  | tr '\n' ' '
 echo -n ']}'
 
