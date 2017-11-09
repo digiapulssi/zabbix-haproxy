@@ -19,7 +19,7 @@ configfile="${3:-/etc/haproxy/haproxy.cfg}"
 # bind :80,:443 (multiple ports, not supported by this script so far)
 
 echo -n '{"data":['
-sed -n -e "s/^\s\+bind \(.*@\)\{0,1\}\(.*\):\([0-9]\+\).*/\2:\3/p" "$configfile" \
+sed -n -e "s/^\s\+bind\s\+\(.*@\)\{0,1\}\(.*\):\([0-9]\+\).*/\2:\3/p" "$configfile" \
   | awk -F ':' '$2>='"$minport" \
   | awk -F ':' '$2<='"$maxport" \
   | sed 's/^\*:/0.0.0.0:/' \
