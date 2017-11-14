@@ -38,7 +38,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.ConnRate</key>
+                    <key>haproxy.info.ConnRate[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -81,7 +81,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.CumConns</key>
+                    <key>haproxy.info.CumConns[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -124,7 +124,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.CumReq</key>
+                    <key>haproxy.info.CumReq[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -167,7 +167,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.CumSslConns</key>
+                    <key>haproxy.info.CumSslConns[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -210,7 +210,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.CurrConns</key>
+                    <key>haproxy.info.CurrConns[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -253,7 +253,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.CurrSslConns</key>
+                    <key>haproxy.info.CurrSslConns[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -296,7 +296,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.Idle_pct</key>
+                    <key>haproxy.info.Idle_pct[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -339,7 +339,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.Nbproc</key>
+                    <key>haproxy.info.Nbproc[{$HAPROXY_SOCK}]</key>
                     <delay>3600</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -382,7 +382,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.PipesFree</key>
+                    <key>haproxy.info.PipesFree[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -425,7 +425,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.PipesUsed</key>
+                    <key>haproxy.info.PipesUsed[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -468,7 +468,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.Run_queue</key>
+                    <key>haproxy.info.Run_queue[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -511,7 +511,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.SessRate</key>
+                    <key>haproxy.info.SessRate[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -554,7 +554,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.SslRate</key>
+                    <key>haproxy.info.SslRate[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -597,7 +597,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.Tasks</key>
+                    <key>haproxy.info.Tasks[{$HAPROXY_SOCK}]</key>
                     <delay>60</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -640,7 +640,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.Uptime_sec</key>
+                    <key>haproxy.info.Uptime_sec[{$HAPROXY_SOCK}]</key>
                     <delay>600</delay>
                     <history>30</history>
                     <trends>90</trends>
@@ -683,7 +683,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>haproxy.info.Version</key>
+                    <key>haproxy.info.Version[{$HAPROXY_SOCK}]</key>
                     <delay>3600</delay>
                     <history>30</history>
                     <trends>0</trends>
